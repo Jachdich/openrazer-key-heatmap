@@ -1,15 +1,23 @@
 import colorsys
 import random
-import json, math
+import json, math, sys
+
+if len(sys.argv) < 2:
+    print("Error: heatmap file needed")
+    sys.exit(1
 
 from openrazer.client import DeviceManager
 from openrazer.client import constants as razer_constants
 
 from keyboard import layouts
 
-with open("/home/hazel/.heatmap.json", "r") as f:
-    data = json.loads(f.read())
-
+try:
+    with open(sys.argv[1], "r") as f:
+        data = json.loads(f.read())
+except:
+    print("Heatmap file unaccessable!")
+    sys.exit(1)
+        
 MAX = -1
 
 DISALLOWED_KEYS = ["space", "backspace", "leftarrow", "rightarrow", "downarrow", "uparrow"] #common keys that would mess up the other keys
