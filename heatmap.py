@@ -4,7 +4,7 @@ import json, math, sys
 
 if len(sys.argv) < 2:
     print("Error: heatmap file needed")
-    sys.exit(1
+    sys.exit(1)
 
 from openrazer.client import DeviceManager
 from openrazer.client import constants as razer_constants
