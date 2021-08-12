@@ -6,6 +6,8 @@ Just-for-fun program to log every keypress on a keyboard and colour each key acc
 
 Replace your `/usr/lib/python3/dist-packages/openrazer_daemon/misc/key_event_management.py` with `key_event_management.py` from this repo. 
 
+This file seems to be in different places, on arch it was `/usr/lib/python3.9/site-packages/openrazer_daemon/misc/key_event_management.py`.
+
 # !!!!IMPORTANT!!!!
 
 It is very VERY VERY important to specify the heatmap location. This is done by editing the very first line of code. **YOU MUST DO THIS OR THE DRIVER WILL CRASH. IT MUST ALSO BE AN ABSOLUTE PATH THAT WILL NOT CHANGE (i.e. NOT a USB drive)**. sorry for the overemphesis.
